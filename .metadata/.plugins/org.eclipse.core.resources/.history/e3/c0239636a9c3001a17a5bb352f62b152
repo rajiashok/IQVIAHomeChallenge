@@ -1,0 +1,19 @@
+package com.example.demo.util;
+
+public class PrintMessage extends TimerTask{
+
+	String message;
+	public PrintMessage(String m) {
+		
+		this.message=m;
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println(this.message);
+		
+	}
+
+
+
+}

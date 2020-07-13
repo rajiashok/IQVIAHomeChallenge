@@ -1,0 +1,23 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class MainTest {
+
+	public static void main(String[] args) throws ParseException {
+		long diff;
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+		Date now = new Date();
+		String dN = formatter.format(now);
+		Date dateNow = formatter.parse(dN);
+		Date dateGiven = formatter.parse("13-07-2020 08:54:00");
+		if (dateGiven.compareTo(dateNow) < 0) {
+			diff = 0;
+		} else {
+			diff = dateGiven.getTime() - dateNow.getTime();
+		}
+		System.out.println(diff);
+
+	}
+
+}

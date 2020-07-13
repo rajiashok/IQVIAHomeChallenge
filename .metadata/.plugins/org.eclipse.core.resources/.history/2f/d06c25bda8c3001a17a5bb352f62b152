@@ -1,0 +1,17 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+import com.example.controller.MessageController;
+
+@SpringBootApplication
+@ComponentScan(basePackageClasses=MessageController.class)
+public class IqviaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(IqviaApplication.class, args);
+	}
+
+}

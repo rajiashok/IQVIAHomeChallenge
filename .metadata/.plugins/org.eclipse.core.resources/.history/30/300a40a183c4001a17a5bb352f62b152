@@ -1,0 +1,7 @@
+package com.example.demo.model;
+
+public class Message {
+	private String message;
+	private String scheduledTime;
+
+}

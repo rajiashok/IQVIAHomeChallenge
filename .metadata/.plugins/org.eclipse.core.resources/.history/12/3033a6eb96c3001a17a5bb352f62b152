@@ -1,0 +1,17 @@
+package com.example.util;
+
+import java.util.TimerTask;
+
+public class PrintMessage extends TimerTask{
+	String message;
+	public PrintMessage(String m) {
+		
+		this.message=m;
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

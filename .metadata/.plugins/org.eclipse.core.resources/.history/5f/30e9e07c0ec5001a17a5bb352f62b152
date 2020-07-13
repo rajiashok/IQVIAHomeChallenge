@@ -1,0 +1,31 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Message;
+import com.example.demo.model.Status;
+
+@Service
+public class MessageSchedulerService {
+
+	@Autowired
+	private JmsTemplate jmsTemplate;
+
+	public String sendMessage(Message msg) {
+		System.out.println("Sending a transaction.");
+		// Post message to the message queue named "MessageQueue"
+		Status s=new Status();
+		try {
+		jmsTemplate.convertAndSend("MessageQueue", msg);
+		s.setStatusCode(202);
+		s.setStatusMessage("Accepted");
+		return "202 Success";
+		}
+		catch(Exception e) {
+			return e.getMessage();
+		}
+	}
+
+}

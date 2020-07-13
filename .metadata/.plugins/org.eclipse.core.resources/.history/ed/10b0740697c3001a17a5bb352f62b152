@@ -1,0 +1,22 @@
+package com.example.service;
+
+import java.awt.Toolkit;
+import java.util.Timer;
+
+import org.springframework.scheduling.TaskScheduler;
+import org.springframework.scheduling.annotation.SchedulingConfigurer;
+import org.springframework.scheduling.config.ScheduledTaskRegistrar;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MessageSchedulerService {
+	TaskScheduler scheduler;
+	 public void messageScheduler( int seconds,String message) {
+		  Toolkit toolkit = Toolkit.getDefaultToolkit();
+	       Timer timer = new Timer();
+	        timer.schedule(new PrintMessage(), seconds*1000);
+		 
+	 }
+	
+
+}

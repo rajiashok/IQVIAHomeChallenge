@@ -1,0 +1,31 @@
+package com.example.demo.service;
+
+
+import java.util.Timer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.scheduling.TaskScheduler;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.util.PrintMessage;
+
+
+
+@Service
+public class MessageSchedulerService {
+
+	@Autowired private JmsTemplate jmsTemplate;
+	TaskScheduler scheduler;
+	 public void messageScheduler( int seconds,String message) {
+		 System.out.println("in service");
+		  //Toolkit toolkit = Toolkit.getDefaultToolkit();
+	       Timer timer = new Timer();
+	        timer.schedule(new PrintMessage(message), seconds*1000);
+		 
+	 }
+	
+
+
+
+}

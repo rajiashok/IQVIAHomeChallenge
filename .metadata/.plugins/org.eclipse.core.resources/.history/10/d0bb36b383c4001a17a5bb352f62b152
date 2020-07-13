@@ -1,0 +1,14 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MessageReceiver {
+	
+	  @JmsListener(destination = "MessageQueue", containerFactory = "myFactory")
+	  public void receiveMessage(Message msg) {
+	    System.out.println("Received <" + transaction + ">");
+	    
+	  }
+
+}

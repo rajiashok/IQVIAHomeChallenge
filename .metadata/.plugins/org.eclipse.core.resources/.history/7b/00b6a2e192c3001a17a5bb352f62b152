@@ -1,0 +1,20 @@
+package com.example.service;
+
+import org.springframework.scheduling.TaskScheduler;
+import org.springframework.scheduling.annotation.SchedulingConfigurer;
+import org.springframework.scheduling.config.ScheduledTaskRegistrar;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MessageSchedulerService implements SchedulingConfigurer {
+	TaskScheduler scheduler;
+	 public void messageScheduler() {
+		 
+	 }
+	@Override
+	public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

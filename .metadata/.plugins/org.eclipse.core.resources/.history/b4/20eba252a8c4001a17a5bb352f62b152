@@ -1,0 +1,27 @@
+package com.example.demo.service;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Timer;
+
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.model.Message;
+import com.example.demo.util.PrintMessage;
+
+@Component
+public class MessageReceiver {
+	
+	  @JmsListener(destination = "MessageQueue", containerFactory = "myFactory")
+	  public void receiveMessage(Message msg) {
+		  Timer timer = new Timer();
+		  Date dateNow = new Date();
+		  SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+		  dateGiven=formatter.format(msg.getScheduledTime());
+	        timer.schedule(new PrintMessage(msg.toString()), seconds*1000);
+	    //System.out.println("Received <" + msg.toString() + ">");
+	    
+	  }
+
+}
