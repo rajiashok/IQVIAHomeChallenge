@@ -10,7 +10,7 @@
   ### Set Up Active MQ:
     1. In this project in order not to lose the messages while restarting the java Application, Apache active MQ is being used. 
        Hence, active MQ is required to be downloaded locally from the below mentioned website:
-        [ACTIVE MQ download](https://activemq.apache.org/components/classic/download/)
+       (https://activemq.apache.org/components/classic/download/)
     2. To start the active MQ locally, open the command prompt and open the bin path of the downloaded activeMQ and 
        run the command .\activemq start
     3. Open http://localhost:8161/admin/queues.jsp in your browser.
@@ -26,7 +26,7 @@
     1. API can be tested using postman.
     2. Create a post request in postman with the following API request
         http://localhost:8080/message/pushv2
-    3. For the request body the belo sample could be used. Raw data radio button has ti be enabled with type as JSON. 
+    3. For the request body the belo sample could be used. Raw data radio button has to be enabled with type as JSON. 
         {
             "message":"Welcome to IQVIA Application",
             "scheduledTime":"13-07-2020 17:48:52"
