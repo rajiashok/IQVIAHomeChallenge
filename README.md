@@ -10,10 +10,11 @@
   ### Set Up Active MQ:
     1. In this project in order not to lose the messages while restarting the java Application, Apache active MQ is being used. 
        Hence, active MQ is required to be downloaded locally from the below mentioned website:
-        (https://activemq.apache.org/components/classic/download/)
-    2. To start the active MQ locally, open the command promt and open the bin path of the downloaded activeMQ and run the command **.\activemq** start
-    3. Open (http://localhost:8161/admin/queues.jsp) in your browser.
-    4. Under the Queues tab, create a queue with name **MessageQueue**.
+        [ACTIVE MQ download](https://activemq.apache.org/components/classic/download/)
+    2. To start the active MQ locally, open the command prompt and open the bin path of the downloaded activeMQ and 
+       run the command .\activemq start
+    3. Open http://localhost:8161/admin/queues.jsp in your browser.
+    4. Under the Queues tab, create a queue with name  "MessageQueue".
   
   ### To run the code locally, IDE such as eclipse or STS can be used:
     1. Checkout the project from the GIT hub repository in your local.
